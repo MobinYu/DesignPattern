@@ -1,4 +1,4 @@
-package com.example.demo.study.locks;
+package com.yu.study.locks;
 
 import org.redisson.Redisson;
 import org.redisson.api.RLock;

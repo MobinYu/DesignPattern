@@ -1,4 +1,4 @@
-package com.example.demo.study.thread.pool;
+package com.yu.study.thread.pool;
 
 import java.util.List;
 

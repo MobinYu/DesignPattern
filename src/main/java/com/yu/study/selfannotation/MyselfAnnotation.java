@@ -1,4 +1,4 @@
-package com.example.demo.study.selfannotation;
+package com.yu.study.selfannotation;
 
 @TagTable(value = "MyselfAnnotationName")
 public class MyselfAnnotation {

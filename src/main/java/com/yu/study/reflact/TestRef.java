@@ -1,4 +1,4 @@
-package com.example.demo.study.reflact;
+package com.yu.study.reflact;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

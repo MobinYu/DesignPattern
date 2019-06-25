@@ -1,4 +1,4 @@
-package com.example.demo.study.hash;
+package com.yu.study.hash;
 
 import java.util.ArrayList;
 import java.util.HashMap;

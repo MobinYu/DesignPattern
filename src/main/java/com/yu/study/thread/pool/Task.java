@@ -1,4 +1,4 @@
-package com.example.demo.study.thread.pool;
+package com.yu.study.thread.pool;
 
 public class Task implements Runnable {
 

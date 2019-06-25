@@ -1,4 +1,4 @@
-package com.example.demo.study.hash;
+package com.yu.study.hash;
 
 public class HashTest {
 

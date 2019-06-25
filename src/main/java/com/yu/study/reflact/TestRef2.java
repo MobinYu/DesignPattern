@@ -1,4 +1,4 @@
-package com.example.demo.study.reflact;
+package com.yu.study.reflact;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
@@ -31,7 +31,7 @@ public class TestRef2 {
 					if (StringUtils.isNotBlank(cantonValue)){
 						String cantonName = "无";
 						if (cantonValue.equals("320505")){
-							cantonName = "苏州市工业园区";
+							cantonName = "工业园区";
 						}
 						
 						//向目标字段赋值

@@ -1,4 +1,4 @@
-package com.example.demo.study.thread;
+package com.yu.study.thread;
 
 public class TestThread {
 
