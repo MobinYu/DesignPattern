@@ -18,21 +18,31 @@ import io.netty.handler.codec.string.StringDecoder;
  */
 public class NettyServer {
 	public static void main(String[] args) {
-		ServerBootstrap serverBootstrap = new ServerBootstrap();
+		
+		//定义一对线程组
+		//boos为主线程，用于接受客户端的连接，但是不做任何处理，跟老板一样，不做事
+		//worker为从线程组，老板线程组会把任务丢给他，让手下线程组去做任务
 		NioEventLoopGroup boos = new NioEventLoopGroup();
 		NioEventLoopGroup worker = new NioEventLoopGroup();
 		
-		serverBootstrap.group(boos, worker).channel(NioServerSocketChannel.class)
-				.childHandler(new ChannelInitializer<NioSocketChannel>() {
-					protected void initChannel(NioSocketChannel ch) {
-						ch.pipeline().addLast(new StringDecoder());
-						ch.pipeline().addLast(new SimpleChannelInboundHandler<String>() {
-							@Override
-							protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
-								System.out.println(msg);
-							}
-						});
-					}
-				}).bind(9000);
+		//netty服务器的创建，ServerBootstrap是一个启动类
+		ServerBootstrap serverBootstrap = new ServerBootstrap();
+		
+		serverBootstrap.group(boos, worker)  //设置主从线程组
+			.channel(NioServerSocketChannel.class)  //设置nio的双向通道
+			.childHandler(new ChannelInitializer<NioSocketChannel>() {  //子处理器,用于处理workerGroup
+				protected void initChannel(NioSocketChannel ch) {
+					ch.pipeline().addLast(new StringDecoder());
+					ch.pipeline().addLast(new SimpleChannelInboundHandler<String>() {
+						@Override
+						protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
+							System.out.println(msg);
+						}
+					});
+				}
+			}).bind(9000); //启动server,并且设置8088为启动的端口号，可通过.sync()设置为同步方式
+		
+		//监听关闭的channel，设置为同步方式
+		//channelFuture.channel().closeFuture().sync();
 	}
 }
