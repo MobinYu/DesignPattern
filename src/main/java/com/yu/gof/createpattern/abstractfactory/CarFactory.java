@@ -5,7 +5,9 @@ package com.yu.gof.createpattern.abstractfactory;
  */
 public interface CarFactory {
 
-	public void produceTire();
+	public void priduceCar();
 	
-	public void produceSteeringWheel();
+	public void installTire();
+	
+	public void installSteeringWheel();
 }
