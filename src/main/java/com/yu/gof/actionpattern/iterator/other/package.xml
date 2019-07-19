@@ -1,0 +1,10 @@
+<html>
+	<p>行为型模式 -- 迭代器模式</p>
+	<p>示例：歌曲列表</p>
+	<p>
+		自定义了一个迭代器接口 Iterator 和迭代器具体实现类 IteratorImpl，有关键的 2 个方法，hasNext() 判断是否有存在下一个元素，next() 获取下一个元素。
+		在 Container 接口中有一个获取迭代器的方法 getIterator()，这让网易云音乐在遍历歌单的时候，不用直接使用 songList 来遍历，
+		而可以通过 songList.getIterator() 获取迭代器来实现遍历的过程。SongPool.listenToMusicByLoop() 这个方法里面就直接获取迭代器来遍历了。
+	</p>
+	
+</html>

@@ -1,7 +1,7 @@
 package com.yu.gof.actionpattern.iterator.other;
 
 /**
- * 音乐库
+ * 音乐库-客户端
  * @author Administrator
  * @date 2019年7月19日 上午11:45:33
  */
