@@ -2,7 +2,7 @@ package com.yu.gof.actionpattern.observer;
 
 public abstract class Observer {
 	
-	private Subject subject;
+	protected Subject subject;
 	
 	public abstract void update();
 

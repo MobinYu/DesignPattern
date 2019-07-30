@@ -25,6 +25,8 @@
 		实现：
 		观察者模式使用三个类 Subject、Observer 和 Client。Subject 对象带有绑定观察者到 Client 对象和从 Client 对象解绑观察者的方法。
 		我们创建 Subject 类、Observer 抽象类和扩展了抽象类 Observer 的实体类。
+		
+		subject改变状态时，通知观察者执行update方法
 	</p>
 	
 	<p>
