@@ -3,6 +3,9 @@ package com.yu.gof.actionpattern.interpreter.other;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * -上下文类（给解释器传递参数）
+ */
 public class Context {
 
 	private String tableName; //表名
